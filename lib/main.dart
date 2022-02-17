@@ -24,7 +24,7 @@ import 'package:greenpass_app/views/country_selection_page.dart';
 import 'package:greenpass_app/views/settings_page.dart';
 import 'package:greenpass_app/views/my_passes_page.dart';
 import 'package:greenpass_app/views/scan_others_pass.dart';
-import 'package:greenpass_app/views/update_notification.dart';
+// import 'package:greenpass_app/views/update_notification.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
@@ -133,15 +133,15 @@ class _HomePageState extends State<MyHomePage> with SingleTickerProviderStateMix
       );
     }
 
-    if (UpdateCheck.updateCheck != null) {
-      UpdateCheck.updateCheck!.then((res) {
-        if (res != null && res.updateAvailable) {
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) => UpdateNotification(androidUpdateCheckResult: res)
-          ));
-        }
-      });
-    }
+    // if (UpdateCheck.updateCheck != null) {
+    //   UpdateCheck.updateCheck!.then((res) {
+    //     if (res != null && res.updateAvailable) {
+    //       Navigator.push(context, MaterialPageRoute(
+    //         builder: (context) => UpdateNotification(androidUpdateCheckResult: res)
+    //       ));
+    //     }
+    //   });
+    // }
   }
 
   @override
