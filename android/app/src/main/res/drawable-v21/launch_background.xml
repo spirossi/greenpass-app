@@ -9,9 +9,9 @@
             android:gravity="center"
             android:src="@mipmap/logo_greenpass" />
     </item>
-    <item android:bottom="16dp">
+<!--     <item android:bottom="16dp">
         <bitmap
             android:gravity="bottom"
             android:src="@mipmap/logo_rk_ooe" />
-    </item>
+    </item> -->
 </layer-list>
