@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:greenpass_app/services/apple_wallet.dart';
+// import 'package:greenpass_app/services/apple_wallet.dart';
 import 'package:greenpass_app/consts/colors.dart';
 import 'package:greenpass_app/elements/list_elements.dart';
 import 'package:greenpass_app/elements/pass_info.dart';
@@ -138,18 +138,18 @@ class _PassDetailsState extends State<PassDetails> {
                           text: 'The certificate is sent to us for technical reasons in order to generate an Apple Wallet pass. This certificate is not stored longer than necessary for generation, which normally takes a few seconds.'.tr(),
                           dismissButtonText: 'Cancel'.tr(),
                           actionButtonText: 'Create pass'.tr(),
-                          action: () async {
-                            try {
-                              await AppleWallet.getAppleWalletPass(rawCert: cert.rawData, serialNumber: cert.entryList.first.certificateIdentifier);
-                            } catch (_) {
-                              PlatformAlertDialog.showAlertDialog(
-                                context: context,
-                                title: 'Error'.tr(),
-                                text: 'Could not retrieve the Apple Wallet Pass. Please ensure that you are connected to the Internet.'.tr(),
-                                dismissButtonText: 'Ok'.tr()
-                              );
-                            }
-                          },
+                          // action: () async {
+                          //   try {
+                          //     await AppleWallet.getAppleWalletPass(rawCert: cert.rawData, serialNumber: cert.entryList.first.certificateIdentifier);
+                          //   } catch (_) {
+                          //     PlatformAlertDialog.showAlertDialog(
+                          //       context: context,
+                          //       title: 'Error'.tr(),
+                          //       text: 'Could not retrieve the Apple Wallet Pass. Please ensure that you are connected to the Internet.'.tr(),
+                          //       dismissButtonText: 'Ok'.tr()
+                          //     );
+                          //   }
+                          // },
                         );
                       }
                     ),
